@@ -1,0 +1,14 @@
+path = request.path.strip('/')
+is_legal = 1 if path.find('/') == -1 else 0
+
+placeholder = "这是一个在线备忘录，路径即为某项备忘的标题。请注意，在当前版本下，只要某项备忘的路径被获知，其所有数据将是完全公开的，并且可以被任意修改。因此，请勿在此保存任何重要内容！另外，根据 FarBox 的规则，匿名用户（没错就是你，FarBox 的用户机制我还没去研究）的保存次数限制为每 IP 每 10 分钟内不能超过 2 次。请知悉。"
+
+head
+  title
+    block title
+  load('/t/main.css')
+  block head
+
+body
+  block body
+    

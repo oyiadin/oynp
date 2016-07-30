@@ -1,0 +1,33 @@
+extends layout
+
+block title
+  if is_legal
+    +path
+  else
+    | Illegal path!
+
+block head
+  load('jquery /t/post.js')
+
+block body
+  if is_legal
+    #main
+      h2= path
+      hr
+
+      post = get_data(type='post', path='share/', sort='desc', tags=path, limit=1, with_page=False)
+      if post
+        text = post.raw_content
+      else
+        text = ""
+
+      textarea(id="content", autofocus="autofocus", placeholder=placeholder, required="required", rows=8)= text
+      span.hidden(id="title", value=path)
+      div
+        a(onclick="submit();", href="#") 提交保存（请注意次数限制）
+        |  /
+        a(href="/login") 我想登录
+      
+  else
+    #main
+      h2 Path cannot contain the symbol "/" !

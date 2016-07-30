@@ -1,0 +1,40 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: FangSong, sans-serif;
+	background: black;
+	color: #AAA;
+	text-shadow: 0 0 1px #AAA;
+}
+a {
+	color: #AAA !important;
+	text-shadow: 0 0 1px #AAA !important;
+}
+h2 {
+	font-size: 1.4em;
+	margin: 2em 0 1.2em;
+}
+hr {
+	height: 1em;
+	margin-bottom: 1.2em;
+	border: 0;
+}
+hr:before {
+	content: "- - -";
+}
+#main {
+	text-align: center;
+	width: 520px;
+	margin: auto;
+}
+textarea {
+	background: #333;
+	width: 100%;
+	min-height: 12em;
+	border: 0;
+	padding: 0.5em;
+	color: white;
+}
+.hidden {
+	display: none;
+}
